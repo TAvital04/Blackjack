@@ -63,15 +63,15 @@ def table_length():
 game_done = False
 print("Welcome to Blackjack")
 while not game_done:
-    # Reset the game state
+    #Reset the game state
     table.clear()
     dealer = Dealer()
 
-    # Start
+    #Start
     gather_players()
     print("\nPlaying game:")
 
-    # Play turns
+    #Play turns
     done = False
     while not done:
         for player in table:
@@ -83,10 +83,10 @@ while not game_done:
         print_table()  # Final table display after all turns
         done = end_round()
 
-    # Finish
+    #Finish
     check_win(table, dealer)
 
-    # Ask to play again
+    #Ask to play again
     while True:
         match input("Do you want to play again? 'Yes' or 'No': ").lower():
             case "yes":
